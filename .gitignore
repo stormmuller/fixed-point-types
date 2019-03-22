@@ -328,3 +328,6 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+
+# local console app that is used for sanity testing, no need to be in repo
+/Types/ScratchPad
