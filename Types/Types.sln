@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FixedTypes", "Types\FixedTypes.csproj", "{8B211BE8-C758-46CB-8E93-A276A2959FF6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScratchPad", "ScratchPad\ScratchPad.csproj", "{CD1712D1-5AAF-4283-9C07-552EE6E2A959}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FixedTypes.Tests", "Tests\FixedTypes.Tests.csproj", "{B603875C-7296-4FD4-8D12-71A572D1833F}"
 EndProject
 Global
@@ -19,10 +17,6 @@ Global
 		{8B211BE8-C758-46CB-8E93-A276A2959FF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B211BE8-C758-46CB-8E93-A276A2959FF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B211BE8-C758-46CB-8E93-A276A2959FF6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CD1712D1-5AAF-4283-9C07-552EE6E2A959}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CD1712D1-5AAF-4283-9C07-552EE6E2A959}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CD1712D1-5AAF-4283-9C07-552EE6E2A959}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CD1712D1-5AAF-4283-9C07-552EE6E2A959}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B603875C-7296-4FD4-8D12-71A572D1833F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B603875C-7296-4FD4-8D12-71A572D1833F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B603875C-7296-4FD4-8D12-71A572D1833F}.Release|Any CPU.ActiveCfg = Release|Any CPU
