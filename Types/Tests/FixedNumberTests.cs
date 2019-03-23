@@ -43,6 +43,48 @@
         }
 
         [Test]
+        public void SubrtactsWholeNumbers()
+        {
+            var leftHandSide = new Fixed32(16, 2);
+            var rightHandSide = new Fixed32(16, 3);
+
+            var result = leftHandSide - rightHandSide;
+
+            Assert.AreEqual(-1, result.WholeNumber);
+            Assert.AreEqual(0, result.Fraction);
+        }
+
+        [Test]
+        [TestCase(1, 2, 2, 2.5d)]
+        [TestCase(3, 2, 2, 3.5d)]
+        [TestCase(-3, 2, 2, 0.5d)]
+        [TestCase(1, 6, 84, 84.1666666666666667d)]
+        public void AddsFractionalNumbers(int fractionNumerator, int fractionDenominator, int wholeNumberToAddTo, double expected)
+        {
+            var leftHandSide = new Fixed32(16, fractionNumerator) / new Fixed32(16, fractionDenominator);
+            var rightHandSide = new Fixed32(16, wholeNumberToAddTo);
+
+            var result = leftHandSide + rightHandSide;
+
+            Assert.That(result.ToDouble(), Is.EqualTo(expected).Within(0.0001));
+        }
+
+        [Test]
+        [TestCase(1, 2, 2, -1.5d)]
+        [TestCase(3, 2, 2, -0.5d)]
+        [TestCase(-3, 2, 2, -3.5d)]
+        [TestCase(1, 6, 84, -83.83333333333333d)]
+        public void SubtractsFractionalNumbers(int fractionNumerator, int fractionDenominator, int wholeNumberToAddTo, double expected)
+        {
+            var leftHandSide = new Fixed32(16, fractionNumerator) / new Fixed32(16, fractionDenominator);
+            var rightHandSide = new Fixed32(16, wholeNumberToAddTo);
+
+            var result = leftHandSide - rightHandSide;
+
+            Assert.That(result.ToDouble(), Is.EqualTo(expected).Within(0.0001));
+        }
+
+        [Test]
         public void ConvertsToDouble()
         {
             var leftHandSide = new Fixed32(16, 1);
@@ -93,7 +135,7 @@
 
             var result = numerator / denomenator;
 
-            Assert.That(result.ToDouble(), Is.EqualTo(expectedResult).Within(0.00001));
+            Assert.That(result.ToDouble(), Is.EqualTo(expectedResult).Within(0.0001));
         }
     }
 }

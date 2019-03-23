@@ -39,6 +39,13 @@
             return leftHandSide;
         }
 
+        public static Fixed32 operator -(Fixed32 leftHandSide, Fixed32 rightHandSide)
+        {
+            leftHandSide.RawValue -= rightHandSide.RawValue;
+
+            return leftHandSide;
+        }
+
         public static Fixed32 operator *(Fixed32 leftHandSide, Fixed32 rightHandSide)
         {
             var result = leftHandSide.RawValue * rightHandSide.RawValue;
