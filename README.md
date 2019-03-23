@@ -1,9 +1,11 @@
+# Fixed Point Types
+
 ![fixed-point-types build status](https://ci.appveyor.com/api/projects/status/t6scmo444o1p56gp/branch/master?svg=true)
 
-# Fixed Point Types
 A library created to provide fixed point numeric types for use cases where floating point numbers just won't cut it.
 
 [Jump straight to usage](#Usage)
+
 
 ## When would you want to use fixed point numbers over floating point numbers?
 * Are fixed point numbers faster than floating point numbers?
