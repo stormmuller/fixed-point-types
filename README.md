@@ -1,6 +1,8 @@
 # Fixed Point Types
 A library created to provide fixed point numeric types for use cases where floating point numbers just won't cut it.
 
+[Jump straight to usage](#Usage)
+
 ## When would you want to use fixed point numbers over floating point numbers?
 * Are fixed point numbers faster than floating point numbers?
   > Not really, dedicated FPUs in most modern processors actually make floating point operations faster than fixed point operations.
