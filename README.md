@@ -19,9 +19,11 @@ A library created to provide fixed point numeric types for use cases where float
   > Fixed point numbers are deterministic. This is really useful for things like simulations where results need to be perfectly replicable. I originally created this library to create a game using a deterministic lockstep networking model. But There are many different applications for fixed point numbers.
 
 ## Usage
-*Nuget Package not available... Yet.*
 
-For now all you need to do is include the `Fixed32.cs`(Or the entire `FixedTypes.csproj`) file in your solution.
+Install the [nuget package](https://www.nuget.org/packages/FixedTypes/)
+
+OR
+Include the `Fixed32.cs`(Or the entire `FixedTypes.csproj`) file in your solution.
 
 To initialize a new fixed point number:
 ```csharp
