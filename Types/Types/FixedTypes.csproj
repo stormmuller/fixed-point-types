@@ -3,6 +3,20 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <DebugType>full</DebugType>
+    <Version>0.0.1</Version>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Authors>Storm Muller</Authors>
+    <Company />
+    <Description>A C# library for fixed point numbers</Description>
+    <Copyright>FixedTypes (c) 2019, Storm Muller All rights reserved</Copyright>
+    <PackageLicenseUrl>https://github.com/stormmuller/fixed-point-types/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/stormmuller/fixed-point-types/</PackageProjectUrl>
+    <PackageIconUrl>https://github.com/stormmuller/fixed-point-types/tree/master/.github/FxPT.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/stormmuller/fixed-point-types/</RepositoryUrl>
+    <RepositoryType>GIT</RepositoryType>
+    <PackageTags>Number Unity Fixed-point Lockstep Deterministic</PackageTags>
+    <NeutralLanguage>en</NeutralLanguage>
   </PropertyGroup>
 
 </Project>
