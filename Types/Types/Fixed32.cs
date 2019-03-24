@@ -2,10 +2,11 @@
 {
     public struct Fixed32
     {
-        public int Scale { get; private set; }
-        public long RawValue { get; private set; }
-        public int FractionMask { get; private set; }
+        public readonly int Scale;
+        public const int FractionMask = 0xffff;
         public const int Epsilon = 1;
+
+        public long RawValue { get; private set; }
 
         public Fixed32(int scale) : this(scale, 0) { }
 
@@ -13,7 +14,6 @@
         {
             this.Scale = scale;
             this.RawValue = wholeNumber << scale;
-            this.FractionMask = 0xffff;
         }
 
         public int WholeNumber
@@ -28,7 +28,7 @@
         {
             get
             {
-                return (int)(this.RawValue & this.FractionMask);
+                return (int)(this.RawValue & FractionMask);
             }
         }
 
