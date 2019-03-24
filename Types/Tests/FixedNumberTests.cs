@@ -66,7 +66,7 @@
 
             var result = leftHandSide + rightHandSide;
 
-            Assert.That(result.ToDouble(), Is.EqualTo(expected).Within(0.0001));
+            Assert.That((double)result, Is.EqualTo(expected).Within(0.0001));
         }
 
         [Test]
@@ -81,7 +81,7 @@
 
             var result = leftHandSide - rightHandSide;
 
-            Assert.That(result.ToDouble(), Is.EqualTo(expected).Within(0.0001));
+            Assert.That((double)result, Is.EqualTo(expected).Within(0.0001));
         }
 
         [Test]
@@ -89,7 +89,7 @@
         {
             var leftHandSide = new Fixed32(16, 1);
 
-            Assert.AreEqual(1d, leftHandSide.ToDouble());
+            Assert.AreEqual(1d, (double)leftHandSide);
         }
 
         [Test]
@@ -135,7 +135,7 @@
 
             var result = numerator / denomenator;
 
-            Assert.That(result.ToDouble(), Is.EqualTo(expectedResult).Within(0.0001));
+            Assert.That((double)result, Is.EqualTo(expectedResult).Within(0.0001));
         }
     }
 }

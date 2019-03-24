@@ -64,14 +64,14 @@
             return leftHandSide;
         }
 
-        public double ToDouble()
+        public static explicit operator double(Fixed32 number)
         {
-            return (double)this.RawValue / (1 << this.Scale);
+            return (double)number.RawValue / (1 << number.Scale);
         }
 
         public override string ToString()
         {
-            return ToDouble().ToString();
+            return ((double)this).ToString();
         }
     }
 }
