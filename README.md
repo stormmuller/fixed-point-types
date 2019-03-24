@@ -1,6 +1,7 @@
 # Fixed Point Types
 
 ![fixed-point-types build status](https://ci.appveyor.com/api/projects/status/t6scmo444o1p56gp/branch/master?svg=true)
+[![codecov](https://codecov.io/gh/stormmuller/fixed-point-types/branch/master/graph/badge.svg)](https://codecov.io/gh/stormmuller/fixed-point-types)
 
 A library created to provide fixed point numeric types for use cases where floating point numbers just won't cut it.
 
@@ -30,7 +31,7 @@ var someDeterministicNumber = new Fixed32(16, 5); // 5.0
 
 The 16 passed to constructor is the scale of the number. It basically specifies how many bits should be used to store the **characteristic**(bits preceding the point) and how many bits should be used to store the **mantissa**(bits succeeding the point).
 
-### Tips :information_source:
+### :information_source: Tips
 * A smaller scale will decrease precision and increase range.
 * A larger scale will increase precision and decrease range.
 * Scale should be between(and including) 1 and 31
