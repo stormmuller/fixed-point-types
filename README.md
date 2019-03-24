@@ -1,6 +1,6 @@
 # Fixed Point Types
 
-![fixed-point-types build status](https://ci.appveyor.com/api/projects/status/t6scmo444o1p56gp/branch/master?svg=true)
+[![Build status](https://ci.appveyor.com/api/projects/status/t6scmo444o1p56gp/branch/master?svg=true)](https://ci.appveyor.com/project/stormmuller/fixed-point-types/branch/master)
 [![codecov](https://codecov.io/gh/stormmuller/fixed-point-types/branch/master/graph/badge.svg)](https://codecov.io/gh/stormmuller/fixed-point-types)
 
 A library created to provide fixed point numeric types for use cases where floating point numbers just won't cut it.
