@@ -172,5 +172,19 @@
             Assert.AreEqual(result.WholeNumber, integerValue);
             Assert.AreEqual(expectedResult, integerValue);
         }
+
+        [Test]
+        [TestCase(1)]
+        [TestCase(112)]
+        [TestCase(-1)]
+        [TestCase(-112)]
+        [TestCase(1000)]
+        public void ImplicitFixedOperatorCorrectlyCreatesNumber(int integerToCreateWith)
+        {
+            Fixed32 number = integerToCreateWith;
+
+            Assert.AreEqual(integerToCreateWith, number.WholeNumber);
+            Assert.AreEqual(0, number.Fraction);
+        }
     }
 }
