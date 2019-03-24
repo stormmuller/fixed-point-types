@@ -137,5 +137,40 @@
 
             Assert.That((double)result, Is.EqualTo(expectedResult).Within(0.0001));
         }
+
+        [Test]
+        [TestCase(-1, 2, 0)]
+        [TestCase(1, -2, 0)]
+        [TestCase(22, 7, 3)]
+        [TestCase(22, -7, -3)]
+        public void CalculatesWholeNumberCorrectlyWhenNumberIdFraction(int number1, int number2, int expectedResult)
+        {
+            var numerator = new Fixed32(16, number1);
+            var denomenator = new Fixed32(16, number2);
+
+            var result = numerator / denomenator;
+
+            Assert.AreEqual(expectedResult, result.WholeNumber);
+        }
+
+        [Test]
+        [TestCase(1, 2, 0)]
+        [TestCase(-1, 2, 0)]
+        [TestCase(1, -2, 0)]
+        [TestCase(-1, -2, 0)]
+        [TestCase(22, 7, 3)]
+        [TestCase(22, -7, -3)]
+        [TestCase(1, 3, 0)]
+        public void ImplicitIntegerOperatorReturnsWholeNumber(int number1, int number2, int expectedResult)
+        {
+            var numerator = new Fixed32(16, number1);
+            var denomenator = new Fixed32(16, number2);
+
+            var result = numerator / denomenator;
+            int integerValue = result;
+
+            Assert.AreEqual(result.WholeNumber, integerValue);
+            Assert.AreEqual(expectedResult, integerValue);
+        }
     }
 }

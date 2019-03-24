@@ -3,8 +3,10 @@
     public struct Fixed32
     {
         public readonly int Scale;
-        public const int FractionMask = 0xffff;
         public const int Epsilon = 1;
+
+        private const int FractionMask = 0xffff;
+        private const int DefaultScale = 16;
 
         public long RawValue { get; private set; }
 
@@ -20,7 +22,8 @@
         {
             get
             {
-                return (int)(this.RawValue >> this.Scale);
+                return (int)(this.RawValue >> this.Scale) +
+                    (this.RawValue < 0 && this.Fraction != 0 ? 1 : 0);
             }
         }
 
@@ -67,6 +70,16 @@
         public static explicit operator double(Fixed32 number)
         {
             return (double)number.RawValue / (1 << number.Scale);
+        }
+
+        public static implicit operator int(Fixed32 number)
+        {
+            return number.WholeNumber;
+        }
+
+        public static implicit operator Fixed32(int number)
+        {
+            return new Fixed32(DefaultScale, number);
         }
 
         public override string ToString()
