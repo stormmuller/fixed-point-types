@@ -44,6 +44,6 @@ var twoAndAHalf = new Fixed32(16, 5) / new Fixed(16, 2); // 5/2 = 2.5
 
 ## Contributing
 
-This project is covered by many tests, if you find a bug please create and issue. If you know how to solve the issue please create a pull request with the solution and a test for the scenario described in the original issue.
+This project is covered by many tests, if you find a bug please create an issue. If you know how to solve the issue please create a pull request with the solution and a test for the scenario described in the original issue.
 
 This library is far from complete and still requires many useful features. So feel free to create a pull request.:v:
