@@ -39,7 +39,7 @@ The 16 passed to constructor is the scale of the number. It basically specifies 
 
 There is no way to initialize a fixed point number as a fraction(only as a whole number). This is because all numeric literals in C# are floating point numbers, with the exception of integers. If you wanted to initialize a fraction I would suggest dividing the numerator with denominator of the fraction. For example:
 ```csharp
-var twoAndAHalf = new Fixed32(16, 5) / new Fixed(16, 2); // 5/2 = 2.5
+var twoAndAHalf = new Fixed32(16, 5) / new Fixed32(16, 2); // 5/2 = 2.5
 ```
 
 ## Contributing
